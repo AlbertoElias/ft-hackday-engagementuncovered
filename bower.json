@@ -1,0 +1,21 @@
+{
+  "name": "cool-data-viz",
+  "main": [
+    "main.js",
+    "main.scss"
+  ],
+  "dependencies": {
+    "o-header": "^3.0.3",
+    "o-grid": "^3.1.3",
+    "o-forms": "^1.0.0",
+    "o-hoverable": "^1.1.0",
+    "o-tabs": "^1.4.6",
+    "o-colors": "~2.4.7",
+    "o-fonts": "~1.6.7",
+    "isomorphic-fetch": "~2.0.2",
+    "es6-promise": "~2.1.0",
+    "o-buttons": "~2.0.1",
+    "o-typography": "~1.16.2",
+    "d3": "~3.5.5"
+  }
+}

@@ -1,0 +1,14 @@
+.search-box {
+	margin-top: 10px;
+}
+
+.search-box__industry {
+	margin-left: 10px;
+}
+
+.search-box__submit {
+	@include oButtons(big, standout);
+
+	margin: 10px;
+	float: right;
+}

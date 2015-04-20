@@ -1,0 +1,35 @@
+@include oColorsSetUseCase(box, border, grey-tint4);
+
+.results-container {
+	@include oGridRow;
+}
+
+.result-box {
+	@include oGridColumn(6);
+	@include oColorsFor(box, background);
+	
+	margin-bottom: 10px;
+}
+
+.result-box__list {
+	padding: 10px;
+}
+
+.result-box__list__title {
+	@include oFtTypographyTitleLarge;
+
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+.result-box__element {
+	@include oGridRow;
+
+	list-style: none;
+}
+
+.result-box__element__name,
+.result-box__element__value {
+	@include oColorsFor(title, text);
+	@include oGridColumn(6);
+}

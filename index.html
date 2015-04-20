@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html class="core o-hoverable-on">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>Origami template</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<script>
+		var cutsTheMustard = ('querySelector' in document && 'localStorage' in window && 'addEventListener' in window);
+
+		if (cutsTheMustard) {
+			// Swap the `core` class on the HTML element for an `enhanced` one
+			// We're doing it early in the head to avoid a flash of unstyled content
+			document.documentElement.className = document.documentElement.className.replace(/\bcore\b/g, 'enhanced');
+		}
+	</script>
+
+	<style>
+		.core .o--if-js,
+		.enhanced .o--if-no-js { display: none !important; }
+	</style>
+
+	<link rel="stylesheet" href="public/reset.css" />
+	<link rel="stylesheet" href="public/bundle.css" />
+	<script src="//polyfill.webservices.ft.com/v1/polyfill.min.js"></script>
+
+	<script>
+		(function(src) {
+			if (cutsTheMustard) {
+				var o = document.createElement('script');
+				o.async = o.defer = true;
+				o.src = src;
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(o, s);
+			}
+		}('public/bundle.js'));
+	</script>
+</head>
+<body>
+	<header data-o-component="o-header" class="o-header o-header--tall">
+		<div class="o-header__container">
+			<div class="o-header__inner">
+				<div class="o-header__primary">
+					<div class="o-header__primary__left">
+						<a href="http://www.ft.com" class="o-header__logo o-header__logo--ft">
+							<abbr title="Financial Times">FT</abbr>
+							<h1 class="o-header__title">Data Viz</h1>
+						</a>
+					</div>
+					<div class="o-header__primary__center"><h2 class="o-header__tagline">Engagement data</h2></div>
+					<nav class="o-header__primary__right o-hierarchical-nav o-header__nav--tools-theme" data-o-component="o-hierarchical-nav">
+						<ul data-o-hierarchical-nav-level="1"><!--
+							--><li data-priority="1"><a href="#void"><span class="demo__icon o-ft-icons-icon o-ft-icons-icon--search"></span>Tool 1</a></li><!--
+							--><li data-priority="3"><a href="#void"><span class="demo__icon o-ft-icons-icon o-ft-icons-icon--settings"></span>Tool 2</a></li><!--
+							--><li data-priority="4"><a href="#void"><span class="demo__icon o-ft-icons-icon o-ft-icons-icon--share"></span>Tool 3</a></li><!--
+							--><li data-priority="2"><a href="http://www.ft.com"><span class="demo__icon o-ft-icons-icon o-ft-icons-icon--brand-ft-logo-square"></span>FT.com</a></li><!--
+							--><li data-more="" class="o-hierarchical-nav__parent" aria-hidden="true"><a href="#void"><span class="demo__icon o-ft-icons-icon o-ft-icons-icon--hamburger"></span>More</a></li><!--
+						--></ul>
+					</nav>
+
+				</div>
+				<div class="o-header__secondary">
+					
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="search-box o-grid-row">
+			<div class="o-forms-wrapper o-forms-wrapper--highlight" data-o-grid-colspan="12">
+				<div class="o-forms-group o-grid-row">
+					<div data-o-grid-colspan="12 M6">
+						<div class="search-box__industry">
+							<label class="o-forms-label">Select Industry</label>
+							<select class="search-box__industries o-forms-select">
+							</select>
+						</div>
+					</div>
+				</div>
+				<button class="search-box__submit">Submit</button>
+			</div>
+	</div>
+
+	<div class="results-container">
+
+	</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+$o-grid-is-silent: false;
+$o-forms-is-silent: false;
+
+@import 'o-grid/main';
+@import 'o-fonts/main';
+@import 'o-header/main';
+@import 'o-colors/main';
+@import 'o-forms/main';
+@import 'o-buttons/main';
+@import 'o-typography/main';
+
+@import 'src/scss/result-box';
+@import 'src/scss/search-box';
+
+$sans-serif: oFontsGetFontFamilyWithFallbacks(BentonSans);
+
+html {
+	@include oColorsFor(page, background);
+
+	font-family: $sans-serif;
+	overflow-x: hidden;
+}
+
+body {
+	margin: 0;
+}
