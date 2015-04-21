@@ -7,7 +7,7 @@
 .result-box {
 	@include oGridColumn(6);
 	@include oColorsFor(box, background);
-	
+
 	margin-bottom: 10px;
 	height: 560px;
 }
@@ -20,13 +20,12 @@
 
 			&:hover {
 				fill: oColorsGetPaletteColor(red-tint1);
-			}	
+			}
 		}
 
 		text {
 			fill: oColorsGetPaletteColor(black);
 		}
-		
 	}
 
 	&__axis {

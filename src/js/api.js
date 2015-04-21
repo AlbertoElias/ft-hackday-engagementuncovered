@@ -1,7 +1,7 @@
 'use strict';
 
 var baseUrl = 'http://ft-development-int.apigee.net/';
-var contentFacets = ['brand', 'genre', 'people', 'primary_section', 'primary_theme', 'regions', 'sections', 'subjects', 'topics']
+var contentFacets = ['brand', 'genre', 'people', 'primary_section', 'primary_theme', 'regions', 'sections', 'subjects', 'topics'];
 var userFacets = ['country', 'industry', 'position', 'responsibility'];
 
 var apiHandler = {};

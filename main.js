@@ -3,8 +3,6 @@
 require('es6-promise').polyfill();
 require('isomorphic-fetch');
 
-var header = require('o-header');
-
 var apiHandler = require('./src/js/api');
 var chart = require('./src/js/charts');
 var map = require('./src/js/maps');
@@ -29,7 +27,7 @@ function loadResults(results) {
 			facet: facet,
 			names: [],
 			reads: []
-		}
+		};
 
 		for (var i = 0; i < facetResults.length; i++) {
 			data.names[i] = facetResults[i].value;
@@ -74,7 +72,7 @@ function init() {
 			industriesSelect.add(option);
 
 			for (var i = 0; i < industries.length; i++) {
-				var option = document.createElement('option');
+				option = document.createElement('option');
 				option.value = industries[i].name;
 				option.text = industries[i].name;
 				industriesSelect.add(option);
@@ -91,7 +89,7 @@ function init() {
 			countriesSelect.add(option);
 
 			for (var i = 0; i < countries.length; i++) {
-				var option = document.createElement('option');
+				option = document.createElement('option');
 				option.value = countries[i]['iso3'];
 				option.text = countries[i]['country'];
 				countriesSelect.add(option);
@@ -108,7 +106,7 @@ function init() {
 			positionsSelect.add(option);
 
 			for (var i = 0; i < positions.length; i++) {
-				var option = document.createElement('option');
+				option = document.createElement('option');
 				option.value = positions[i].name;
 				option.text = positions[i].name;
 				positionsSelect.add(option);
@@ -125,7 +123,7 @@ function init() {
 			responsibilitiesSelect.add(option);
 
 			for (var i = 0; i < responsibilities.length; i++) {
-				var option = document.createElement('option');
+				option = document.createElement('option');
 				option.value = responsibilities[i].name;
 				option.text = responsibilities[i].name;
 				responsibilitiesSelect.add(option);
