@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<title>Origami template</title>
+	<title>Engagement Uncovered</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 	<script>
@@ -24,6 +24,9 @@
 	<link rel="stylesheet" href="public/reset.css" />
 	<link rel="stylesheet" href="public/bundle.css" />
 	<script src="//polyfill.webservices.ft.com/v1/polyfill.min.js"></script>
+	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
+	<script src="//datamaps.github.io/scripts/0.4.0/datamaps.all.js"></script>
 
 	<script>
 		(function(src) {
@@ -45,19 +48,12 @@
 					<div class="o-header__primary__left">
 						<a href="http://www.ft.com" class="o-header__logo o-header__logo--ft">
 							<abbr title="Financial Times">FT</abbr>
-							<h1 class="o-header__title">Data Viz</h1>
+							<h1 class="o-header__title">Engagement Uncovered</h1>
 						</a>
 					</div>
-					<div class="o-header__primary__center"><h2 class="o-header__tagline">Engagement data</h2></div>
-					<nav class="o-header__primary__right o-hierarchical-nav o-header__nav--tools-theme" data-o-component="o-hierarchical-nav">
-						<ul data-o-hierarchical-nav-level="1"><!--
-							--><li data-priority="1"><a href="#void"><span class="demo__icon o-ft-icons-icon o-ft-icons-icon--search"></span>Tool 1</a></li><!--
-							--><li data-priority="3"><a href="#void"><span class="demo__icon o-ft-icons-icon o-ft-icons-icon--settings"></span>Tool 2</a></li><!--
-							--><li data-priority="4"><a href="#void"><span class="demo__icon o-ft-icons-icon o-ft-icons-icon--share"></span>Tool 3</a></li><!--
-							--><li data-priority="2"><a href="http://www.ft.com"><span class="demo__icon o-ft-icons-icon o-ft-icons-icon--brand-ft-logo-square"></span>FT.com</a></li><!--
-							--><li data-more="" class="o-hierarchical-nav__parent" aria-hidden="true"><a href="#void"><span class="demo__icon o-ft-icons-icon o-ft-icons-icon--hamburger"></span>More</a></li><!--
-						--></ul>
-					</nav>
+					<div class="o-header__primary__center">
+						<h2 class="o-header__tagline">Who's reading what</h2>
+					</div>
 
 				</div>
 				<div class="o-header__secondary">
@@ -71,12 +67,43 @@
 			<div class="o-forms-wrapper o-forms-wrapper--highlight" data-o-grid-colspan="12">
 				<div class="o-forms-group o-grid-row">
 					<div data-o-grid-colspan="12 M6">
-						<div class="search-box__industry">
-							<label class="o-forms-label">Select Industry</label>
-							<select class="search-box__industries o-forms-select">
+						<div class="search-box__facet search-box__facet--industry">
+							<label class="o-forms-label">User Industry</label>
+							<select class="search-box__select--industries o-forms-select">
 							</select>
 						</div>
+
+						<div class="search-box__facet search-box__facet--country">
+							<label class="o-forms-label">User Country</label>
+							<select class="search-box__select--countries o-forms-select">
+							</select>
+						</div>
+
+						<div class="search-box__facet search-box__facet--position">
+							<label class="o-forms-label">User Position</label>
+							<select class="search-box__select--positions o-forms-select">
+							</select>
+						</div>
+
+						<div class="search-box__facet search-box__facet--responsibility">
+							<label class="o-forms-label">User Responsibility</label>
+							<select class="search-box__select--responsibilities o-forms-select">
+							</select>
+						</div>
+
+						<div class="search-box__facet search-box__facet--content">
+							<label class="o-forms-label">Content parameters</label>
+							<input type="text" placeholder="brand:'Martin Wolf' people:'Bill Gates'" class="search-box__input--content o-forms-text">
+							</input>
+						</div>
 					</div>
+
+					<div data-o-grid-colspan="12 M6">
+						<div class="search-box__facet search-box__facet--list">
+							<label class="o-forms-label">Select content facets</label>
+						</div>
+					</div>
+
 				</div>
 				<button class="search-box__submit">Submit</button>
 			</div>

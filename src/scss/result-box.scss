@@ -9,27 +9,51 @@
 	@include oColorsFor(box, background);
 	
 	margin-bottom: 10px;
+	height: 560px;
 }
 
-.result-box__list {
-	padding: 10px;
+.result-box__chart {
+	&__bar-wrapper {
+
+		rect {
+			fill: oColorsGetPaletteColor(red-tint3);
+
+			&:hover {
+				fill: oColorsGetPaletteColor(red-tint1);
+			}	
+		}
+
+		text {
+			fill: oColorsGetPaletteColor(black);
+		}
+		
+	}
+
+	&__axis {
+		text {
+			font: 10px sans-serif;
+		}
+
+		path,
+		line {
+			fill: none;
+			stroke: oColorsGetColorFor(page, text);
+			shape-rendering: crispEdges;
+		}
+
+		&--x path {
+			display: none;
+		}
+	}
+
+	&--country {
+		margin: 20px 10px 10px;
+	}
 }
 
-.result-box__list__title {
+.result-box__title {
 	@include oFtTypographyTitleLarge;
 
 	margin-top: 10px;
 	margin-left: 10px;
-}
-
-.result-box__element {
-	@include oGridRow;
-
-	list-style: none;
-}
-
-.result-box__element__name,
-.result-box__element__value {
-	@include oColorsFor(title, text);
-	@include oGridColumn(6);
 }
