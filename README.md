@@ -1,17 +1,15 @@
-* Engagement Uncovered
+# Engagement Uncovered
 
 Internal FT Hackday 2015 project by Alberto Elias, Rob Godfrey and McKinley Hyden.
 
-A tool that matches up 
-    *content metadata (topics, subjects, brands, people, …)*
-to key user demographics
+A tool that matches up  *content metadata (topics, subjects, brands, people, …)* to key user demographics:
     - industry
     - country
     - seniority
     - and responsibility 
 revealing what types of content are important to particular reader segments
 
-** Usage
+## Usage
 
 To run it:
 
