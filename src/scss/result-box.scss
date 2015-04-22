@@ -5,11 +5,12 @@
 }
 
 .result-box {
-	@include oGridColumn(6);
+	@include oGridColumn((default:12, L:6));
 	@include oColorsFor(box, background);
 
 	margin-bottom: 10px;
 	height: 560px;
+	display: inline-block;
 }
 
 .result-box__chart {
